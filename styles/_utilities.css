@@ -1,0 +1,30 @@
+@tailwind utilities;
+
+@layer utilities {
+  html {
+    &.is-loading,
+    &.is-loading * {
+      @apply cursor-wait !important;
+    }
+  }
+
+  .h-dvh {
+    @apply h-[calc(var(--dvh,1vh)*100)];
+  }
+
+  .h-lvh {
+    @apply h-[calc(var(--vh,1vh)*100)];
+  }
+
+  .focus-visible-dashed {
+    @apple focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-current;
+  }
+
+  a[href='#content'].skip-link {
+    @apply block fixed top-0 left-1/2 -translate-x-1/2 -translate-y-full z-9 px-8 py-4 bg-pageBG text-pageText text-12 leading-125 font-semibold uppercase;
+
+    &:focus {
+      @apply translate-y-0 outline-none;
+    }
+  }
+}

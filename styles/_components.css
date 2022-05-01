@@ -1,0 +1,56 @@
+@tailwind components;
+
+@layer components {
+  .is-body {
+    @apply font-body text-12 m-0 pb-10 last:pb-0;
+    line-height: 16px;
+    letter-spacing: 0.25px;
+    @screen sm {
+      @apply text-16;
+      line-height: 18px;
+    }
+  }
+
+  .is-h1 {
+    @apply font-heading m-0 text-40 uppercase;
+    hyphens: auto;
+    line-height: 34px;
+    letter-spacing: 1px;
+
+    @screen sm {
+      @apply text-62;
+      line-height: 50px;
+      letter-spacing: -1px;
+    }
+  }
+
+  .is-h2 {
+    @apply font-heading m-0 text-24 pb-15 last:pb-0;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    @screen sm {
+      @apply text-42;
+      line-height: 44px;
+    }
+  }
+
+  .is-h3 {
+    @apply font-body m-0 text-36 pb-15 last:pb-0;
+    line-height: 36px;
+    letter-spacing: 0px;
+    @screen sm {
+      @apply text-48;
+      line-height: 48px;
+    }
+  }
+
+  .is-h4 {
+    @apply font-body m-0 text-12 uppercase pb-15 last:pb-0;
+    line-height: 14px;
+    letter-spacing: 0px;
+    @screen sm {
+      @apply text-14;
+      line-height: 16.8px;
+    }
+  }
+}

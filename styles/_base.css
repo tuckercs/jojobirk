@@ -1,0 +1,126 @@
+@tailwind base;
+
+/* Variables */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --off-white: #f0e9df;
+  --red: #ff0000;
+
+  --black-hsl: 0, 0%, 0%;
+  --white-hsl: 0, 0%, 100%;
+
+  --pageBG: #f0e9df;
+  --pageText: #000000;
+
+  --pageBG-hsl: 35, 36%, 91%;
+  --pageText-hsl: 0, 0%, 0%;
+}
+
+/* Base Layer */
+@layer base {
+  @font-face {
+    font-family: 'Alright Mono';
+    src: url('/fonts/AlrightMono-Regular.woff2') format('woff2'),
+      url('/fonts/AlrightMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .clean-btn {
+    @apply appearance-none no-underline cursor-pointer;
+  }
+
+  html {
+    @apply text-[10px];
+  }
+
+  html,
+  body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body,
+  p {
+    @apply is-body p-20;
+  }
+
+  strong {
+    @apply font-semibold;
+  }
+
+  ul {
+    @apply ml-8 p-0;
+    list-style: inside;
+  }
+
+  /* Headlines */
+
+  h1 {
+    @apply is-h1;
+  }
+
+  h2 {
+    @apply is-h2;
+  }
+
+  h3 {
+    @apply is-h3;
+  }
+
+  h4 {
+    @apply is-h4;
+  }
+
+  /* Links */
+  a {
+    @apply no-underline text-current;
+  }
+
+  button {
+    @apply clean-btn;
+  }
+
+  /* Images */
+  figure {
+    @apply relative m-0;
+  }
+
+  /* Accessibility */
+
+  a,
+  button,
+  details {
+    @apply focus-visible-dashed;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply focus:outline-none;
+  }
+
+  /* Misc. */
+  hr {
+    @apply my-60 mx-0 border-0 h-1 bg-pageText;
+  }
+
+  ::-moz-selection {
+    @apply bg-blue text-yellow;
+  }
+  ::selection {
+    @apply bg-blue text-yellow;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: black !important;
+  }
+}
