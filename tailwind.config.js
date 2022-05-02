@@ -23,8 +23,8 @@ module.exports = {
     extend: {
       fontFamily: {
         inherit: 'inherit',
-        body: ['Alright Mono, times new roman'],
-        heading: ['Alright Mono, times new roman'],
+        body: ['helvetica, times new roman'],
+        heading: ['helvetica, times new roman'],
       },
     },
   },

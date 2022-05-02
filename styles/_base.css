@@ -44,9 +44,12 @@
     text-rendering: optimizeLegibility;
   }
 
-  body,
-  p {
-    @apply is-body p-20;
+  body {
+    @apply is-body transition-colors;
+  }
+
+  .rc p:not(:first-child) {
+    text-indent: 20px;
   }
 
   strong {

@@ -6,8 +6,8 @@
     line-height: 16px;
     letter-spacing: 0.25px;
     @screen sm {
-      @apply text-16;
-      line-height: 18px;
+      @apply text-36;
+      line-height: 36px;
     }
   }
 

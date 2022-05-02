@@ -63,7 +63,6 @@ const Layout = ({ site = {}, page = {}, children }) => {
         style={headerHeight ? { '--headerHeight': `${headerHeight}px` } : null}
       >
         <Menu />
-        <Header />
         <main id="content">{children}</main>
       </m.div>
     </>

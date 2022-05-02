@@ -1,6 +1,9 @@
 import React from 'react'
 import { Browser } from 'phosphor-react'
 
+import customPortableText from '../../lib/custom-portable-text'
+import customImage from '../../lib/custom-image'
+
 export default {
   title: 'Page',
   name: 'page',
@@ -30,22 +33,16 @@ export default {
       validation: Rule => Rule.required(),
       group: 'settings'
     },
-    {
-      title: 'Overlay header with transparency?',
-      name: 'hasTransparentHeader',
-      type: 'boolean',
-      description:
-        'When activated the header will overlay the first content module with a transparent background and white text until scrolling is engaged.',
-      initialValue: false,
-      group: 'settings'
-    },
-    {
-      title: 'Page Content',
-      name: 'sections',
-      type: 'array',
-      of: [{ type: 'blockText' }, { type: 'dividerImage' }],
+    customPortableText({
+      title: 'content',
+      name: 'content',
       group: 'content'
-    },
+    }),
+    customImage({
+      title: 'portrait',
+      name: 'portrait',
+      group: 'content'
+    }),
     {
       title: 'SEO / Share Settings',
       name: 'seo',
