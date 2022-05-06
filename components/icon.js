@@ -16,6 +16,111 @@ const getIcon = (name, color) => {
           fill={color}
         />
       )
+    case 'mail':
+      return (
+        <>
+          <rect width="256" height="256" fill="none"></rect>
+          <polygon
+            points="224 96 145.5 152 110.5 152 32 96 128 32 224 96"
+            opacity="0.2"
+          ></polygon>
+          <path
+            d="M32,96V200a8,8,0,0,0,8,8H216a8,8,0,0,0,8-8V96L128,32Z"
+            fill="none"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          ></path>
+          <line
+            x1="110.5"
+            y1="152"
+            x2="34.5"
+            y2="205.7"
+            fill="none"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          ></line>
+          <line
+            x1="221.5"
+            y1="205.7"
+            x2="145.5"
+            y2="152"
+            fill="none"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          ></line>
+          <polyline
+            points="224 96 145.5 152 110.5 152 32 96"
+            fill="none"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          ></polyline>
+        </>
+      )
+    case 'linkedin':
+      return (
+        <svg>
+          <rect width="256" height="256" fill="none"></rect>
+          <rect
+            x="36"
+            y="36"
+            width="184"
+            height="184"
+            rx="8"
+            opacity="0.2"
+          ></rect>
+          <rect
+            x="36"
+            y="36"
+            width="184"
+            height="184"
+            rx="8"
+            fill="none"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          ></rect>
+          <line
+            x1="120"
+            y1="112"
+            x2="120"
+            y2="176"
+            fill="none"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          ></line>
+          <line
+            x1="88"
+            y1="112"
+            x2="88"
+            y2="176"
+            fill="none"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          ></line>
+          <path
+            d="M120,140a28,28,0,0,1,56,0v36"
+            fill="none"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          ></path>
+          <circle cx="88" cy="80" r="12"></circle>
+        </svg>
+      )
     case 'Facebook':
       return (
         <path

@@ -2,12 +2,12 @@
 
 @layer components {
   .is-body {
-    @apply font-body text-12 m-0 pb-10 last:pb-0;
-    line-height: 16px;
+    @apply font-body text-32 m-0 pb-10 last:pb-0;
+    line-height: 32px;
     letter-spacing: 0.25px;
     @screen sm {
-      @apply text-36;
-      line-height: 36px;
+      @apply text-42;
+      line-height: 42px;
     }
   }
 

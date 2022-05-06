@@ -18,18 +18,28 @@ const Home = ({ data }) => {
     },
     {
       name: 'blue',
-      bgHex: '#0000ff',
-      textHex: '#ff0000',
-    },
-    {
-      name: 'red',
-      bgHex: '#ff0000',
-      textHex: '#ffffff',
+      bgHex: '#5561C7',
+      textHex: '#DAF3E1',
     },
     {
       name: 'green',
-      bgHex: '#00FF00',
+      bgHex: '#5D9061',
+      textHex: '#543939',
+    },
+    {
+      name: 'red',
+      bgHex: '#D26A51',
+      textHex: '#ffffff',
+    },
+    {
+      name: 'yellow',
+      bgHex: '#FFCD4C',
       textHex: '#FF5733',
+    },
+    {
+      name: 'lilac',
+      bgHex: '#7771C7',
+      textHex: '#C7C31F',
     },
   ]
 
@@ -43,29 +53,38 @@ const Home = ({ data }) => {
   return (
     <Layout site={site} page={page}>
       <div
-        style={{ gridTemplateRows: 'auto 1fr' }}
+        style={{ gridTemplateRows: ' 1fr' }}
         className="grid grid-cols-12 gap-x-16 h-dvh items-start"
       >
-        <div className="col-span-full p-10">
+        <div className="col-span-full sm:col-span-9 pt-10 pl-10 z-2">
+          <Content blocks={page.content} />
+        </div>
+
+        <div className="absolute w-3/4 sm:w-1/3 z-0 top-0 right-0">
+          <div className="w-full h-full bg-black z-10 absolute opacity-50 sm:opacity-20" />
+          <Image src={page.portrait} />
+        </div>
+
+        <div className="col-span-full p-10 z-1 mb-30 sm:mb-0">
           <Icon name="Name" viewBox="0 0 675 73" />
         </div>
-
-        <div className="col-span-4 pt-10 pl-10">
-          <Content blocks={page.content} />
-        </div>
-        <div className="col-span-4 p-10">
-          <Content blocks={page.content} />
-        </div>
-
-        <div className="col-span-3 col-start-10 pt-10 pr-10">
-          <div className="">
-            <Image src={page.portrait} />
-          </div>
-        </div>
-        <div className="fixed w-screen h-50 bottom-0">
+        <div className="fixed w-screen h-50 bottom-0 z-2">
           <div className="bg-black text-white h-full text-right text-22 px-10 flex items-center justify-between">
-            <div className="w-25">
-              <Icon name="Twitter" viewBox="0 0 256 256" color="#fff" />
+            <div className="flex">
+              <div className="w-25 mr-5">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/jordan-birkhead-764603154/"
+                >
+                  <Icon name="linkedin" viewBox="0 0 256 256" color="#fff" />
+                </a>
+              </div>
+              <div className="w-25">
+                <a href="mailto:birkheadjordan@gmail.com">
+                  <Icon name="mail" viewBox="0 0 256 256" color="#fff" />
+                </a>
+              </div>
             </div>
 
             <div className="flex">

@@ -36,6 +36,10 @@
     @apply text-[10px];
   }
 
+  .rc p a {
+    @apply underline opacity-50 hover:opacity-100 transition-opacity;
+  }
+
   html,
   body {
     -webkit-tap-highlight-color: transparent;
@@ -48,8 +52,12 @@
     @apply is-body transition-colors;
   }
 
+  /* .rc p {
+    @apply mix-blend-multiply bg-white;
+  } */
+
   .rc p:not(:first-child) {
-    text-indent: 20px;
+    text-indent: 75px;
   }
 
   strong {
