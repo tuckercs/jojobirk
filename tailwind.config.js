@@ -23,8 +23,8 @@ module.exports = {
     extend: {
       fontFamily: {
         inherit: 'inherit',
-        body: ['helvetica, times new roman'],
-        heading: ['helvetica, times new roman'],
+        body: ['GT Haptic, times new roman'],
+        heading: ['GT Haptic, times new roman'],
       },
     },
   },

@@ -20,9 +20,8 @@
 /* Base Layer */
 @layer base {
   @font-face {
-    font-family: 'Alright Mono';
-    src: url('/fonts/AlrightMono-Regular.woff2') format('woff2'),
-      url('/fonts/AlrightMono-Regular.woff') format('woff');
+    font-family: 'GT Haptic';
+    src: url('/fonts/GT-Haptik-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -52,9 +51,9 @@
     @apply is-body transition-colors;
   }
 
-  /* .rc p {
-    @apply mix-blend-multiply bg-white;
-  } */
+  .rc p {
+    @apply text-justify;
+  }
 
   .rc p:not(:first-child) {
     text-indent: 75px;

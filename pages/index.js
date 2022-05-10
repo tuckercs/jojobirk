@@ -24,7 +24,7 @@ const Home = ({ data }) => {
     {
       name: 'green',
       bgHex: '#5D9061',
-      textHex: '#543939',
+      textHex: '#FAAA78',
     },
     {
       name: 'red',
@@ -56,7 +56,7 @@ const Home = ({ data }) => {
         style={{ gridTemplateRows: ' 1fr' }}
         className="grid grid-cols-12 gap-x-16 h-dvh items-start"
       >
-        <div className="col-span-full sm:col-span-9 pt-10 pl-10 z-2">
+        <div className="col-span-full sm:col-span-8 pt-10 pl-10 z-2">
           <Content blocks={page.content} />
         </div>
 
