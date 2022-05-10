@@ -1,4 +1,5 @@
 import React from 'react'
+import cx from 'classnames'
 
 import { getPage, queries } from '@data'
 
@@ -9,41 +10,50 @@ import Image from '@components/image'
 
 const Home = ({ data }) => {
   const { page, site } = data
+  const [theme, setTheme] = React.useState('light')
 
   const colors = [
     {
       name: 'white',
       bgHex: '#ffffff',
       textHex: '#000000',
+      opacity: 'light',
     },
     {
       name: 'blue',
       bgHex: '#5561C7',
       textHex: '#DAF3E1',
+      opacity: 'dark',
     },
     {
       name: 'green',
       bgHex: '#5D9061',
       textHex: '#FAAA78',
+      opacity: 'dark',
     },
     {
       name: 'red',
       bgHex: '#D26A51',
       textHex: '#ffffff',
+      opacity: 'dark',
     },
     {
       name: 'yellow',
       bgHex: '#FFCD4C',
       textHex: '#FF5733',
+      opacity: 'dark',
     },
     {
       name: 'lilac',
       bgHex: '#7771C7',
       textHex: '#C7C31F',
+      opacity: 'dark',
     },
   ]
 
   const handleClick = (e) => {
+    setTheme(e.opacity)
+
     if (typeof document !== 'undefined') {
       document.body.style.backgroundColor = e.bgHex
       document.body.style.color = e.textHex
@@ -61,7 +71,13 @@ const Home = ({ data }) => {
         </div>
 
         <div className="absolute w-3/4 sm:w-1/3 z-0 top-0 right-0">
-          <div className="w-full h-full bg-black z-10 absolute opacity-50 sm:opacity-20" />
+          <div
+            className={cx(
+              'w-full h-full z-10 absolute opacity-50 sm:opacity-10',
+              { 'bg-black': theme === 'dark' },
+              { 'bg-white': theme === 'light' }
+            )}
+          />
           <Image src={page.portrait} />
         </div>
 
