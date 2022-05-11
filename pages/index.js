@@ -13,6 +13,10 @@ const Home = ({ data }) => {
   const { page, site } = data
   const [theme, setTheme] = React.useState('light')
 
+  React.useEffect(() => {
+    setTheme(colors[0])
+  }, [])
+
   const colors = [
     {
       name: 'white',
