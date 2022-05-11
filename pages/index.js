@@ -69,7 +69,7 @@ const Home = ({ data }) => {
         cursorContent={
           <div
             style={{ backgroundColor: theme.bgHex, color: theme.textHex }}
-            className={`absolute border w-25 h-25 rounded-full -translate-x-1/2 -translate-y-1/2`}
+            className={`absolute border w-25 h-25 rounded-full -translate-x-1/2 -translate-y-1/2 ml-5 -mt-5`}
           />
         }
       >
