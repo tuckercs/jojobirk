@@ -11,7 +11,7 @@ import CursorFollow from '@components/cursor-follow'
 
 const Home = ({ data }) => {
   const { page, site } = data
-  const [theme, setTheme] = React.useState('light')
+  const [theme, setTheme] = React.useState(null)
 
   React.useEffect(() => {
     setTheme(colors[0])
@@ -22,7 +22,7 @@ const Home = ({ data }) => {
       name: 'white',
       bgHex: '#ffffff',
       textHex: '#000000',
-      opacity: 'light',
+      opacity: 'dark',
     },
     {
       name: 'blue',
@@ -65,6 +65,10 @@ const Home = ({ data }) => {
     }
   }
 
+  if (!theme) return null
+
+  console.log(theme)
+
   return (
     <Layout site={site} page={page}>
       <CursorFollow
@@ -85,7 +89,7 @@ const Home = ({ data }) => {
             <Content blocks={page.content} />
           </div>
 
-          <div className="absolute w-3/4 sm:w-1/3 z-0 top-0 right-0">
+          <div className="absolute w-3/4 sm:w-1/3 sm:pl-10 z-0 top-0 right-0">
             <div
               className={cx(
                 'w-full h-full z-10 absolute opacity-50 sm:opacity-10',
@@ -93,22 +97,26 @@ const Home = ({ data }) => {
                 { 'bg-white': theme.opacity === 'light' }
               )}
             />
-            <Image src={page.portrait} />
+            <Image src={page.portrait} alt="Jordan Image" />
           </div>
 
           <div className="col-span-full p-10 z-1 mb-30 sm:mb-0">
             <Icon name="Name" viewBox="0 0 675 73" />
           </div>
-          <div className="fixed w-screen h-50 bottom-0 z-2">
+          <div
+            style={{ minWidth: '225px', border: 'none', borderRadius: '4px' }}
+            className="fixed rounded-50 left-1/2 -translate-x-1/2 h-50 bottom-10 sm:bottom-12 z-2"
+          >
             <div
               style={{
+                borderRadius: '4px',
                 backgroundColor: 'rgba(0,0,0,.25)',
                 backdropFilter: 'blur(10px)',
-                boxShadow: '0px -3px 10px rgba(0, 0, 0, .4)',
+                boxShadow: '0px -5px 13px rgba(0, 0, 0, .1)',
               }}
-              className=" text-white h-full text-right text-22 px-10 flex items-center justify-between"
+              className=" text-white rounded-50 h-full text-right text-22 px-10 flex items-center justify-center"
             >
-              <div className="flex">
+              {/* <div className="flex">
                 <div className="w-25 mr-5">
                   <a
                     target="_blank"
@@ -123,7 +131,7 @@ const Home = ({ data }) => {
                     <Icon name="mail" viewBox="0 0 256 256" color="#fff" />
                   </a>
                 </div>
-              </div>
+              </div> */}
 
               <div className="flex">
                 {colors.map((c, i) => {
@@ -137,7 +145,7 @@ const Home = ({ data }) => {
                   )
                 })}
               </div>
-              <span>2022</span>
+              {/* <span>2022</span> */}
             </div>
           </div>
         </div>
